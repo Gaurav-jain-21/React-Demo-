@@ -1,4 +1,15 @@
+import React from 'react'
+
 const Greet = () => {
-    return <h1> hello world</h1>;
+    const greet="hello world";
+    const date= new Date();
+  return (
+    <div>
+        <h1>{greet}</h1>
+        <p> today is : {date.getDate()}</p>
+      
+    </div>
+  )
 }
-export default Greet;
+
+export default Greet
