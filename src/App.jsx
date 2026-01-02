@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Main from "./components/Main";
 import Arrays from "./components/Arrays";
 import ProductInfo from "./components/ProductInfo";
+import PropsEx from "./components/PropsEx";
 const App = () => {
   return <div>
 
@@ -16,6 +17,7 @@ const App = () => {
         <Arrays/>
         <ProductInfo/>
        <Footer/>
+       <PropsEx name="John Doe"/>
     </div>;
 
 };
