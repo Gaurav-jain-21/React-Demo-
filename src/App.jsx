@@ -4,6 +4,7 @@ import Main from "./component1/Main.jsx";
 import Footer from "./component1/Footer.jsx";
 import List1 from "./component1/List1.jsx";
 import Expression from "./component1/Expression.jsx";
+import ImageProps from "./component1/ImageProps.jsx";
 const App=()=>{
   return <div>
     <Header/>
@@ -12,6 +13,7 @@ const App=()=>{
     <Footer/>
     <Expression/>
     <List1/>
+    <ImageProps name="Gaurav Jain" age="44" year="2024"/>
   </div>
 }
 export default App;
