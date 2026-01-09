@@ -5,6 +5,7 @@ import Footer from "./component1/Footer.jsx";
 import List1 from "./component1/List1.jsx";
 import Expression from "./component1/Expression.jsx";
 import ImageProps from "./component1/ImageProps.jsx";
+import Password from "./component1/Password.jsx";
 const App=()=>{
   return <div>
     <Header/>
@@ -14,6 +15,7 @@ const App=()=>{
     <Expression/>
     <List1/>
     <ImageProps name="Gaurav Jain" age="44" year="2024"/>
+    <Password isValid={true}/>
   </div>
 }
 export default App;
