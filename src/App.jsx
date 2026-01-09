@@ -1,11 +1,7 @@
-import First from "./components/First.jsx";
-import ListApp from "./components/ListApp.jsx";
-const App = () => {
+import Greet from "./component1/Greet.jsx";
+const App=()=>{
   return <div>
-       <First/>
-       <br></br>
-       <ListApp/>
-    </div>;
-
-};
+    <Greet/>
+  </div>
+}
 export default App;
