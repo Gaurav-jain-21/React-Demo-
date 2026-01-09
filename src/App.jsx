@@ -7,6 +7,7 @@ import Expression from "./component1/Expression.jsx";
 import ImageProps from "./component1/ImageProps.jsx";
 import Password from "./component1/Password.jsx";
 import Cart from "./component1/Cart.jsx";
+import Action from "./component1/Action.jsx";
 const App=()=>{
   return <div>
     <Header/>
@@ -18,6 +19,7 @@ const App=()=>{
     <ImageProps name="Gaurav Jain" age="44" year="2024"/>
     <Password isValid={true}/>
     <Cart/>
+    <Action/>
   </div>
 }
 export default App;
