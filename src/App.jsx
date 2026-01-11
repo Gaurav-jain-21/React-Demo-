@@ -1,14 +1,7 @@
-import ProfileCard from "./component1/ProfileCard.jsx";
-import ContectDetail from "./ContectDetail.jsx";
-import CopyInput from "./component1/CopyInput.jsx";
+import Switch from "./component1/Switch.jsx";
 const App=()=>{
   return <div>
-    <ProfileCard/>
-    <br>
-    </br>
-    <ContectDetail/>
-    <br/>
-    <CopyInput/>
+    <Switch/>
   </div>
 }
 export default App;
