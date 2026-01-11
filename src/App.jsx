@@ -1,7 +1,7 @@
-import Switch from "./component1/Switch.jsx";
+import FirstHook from "./hooks/FirstHook.jsx";
 const App=()=>{
   return <div>
-    <Switch/>
+    <FirstHook/>
   </div>
 }
 export default App;
