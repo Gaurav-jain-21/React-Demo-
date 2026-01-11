@@ -1,9 +1,7 @@
-import FirstHook from "./component1/FirstHook.jsx";
-import SecondHook from "./component1/SecondHook.jsx";
+import ProfileCard from "./component1/ProfileCard.jsx";
 const App=()=>{
   return <div>
-    <FirstHook/>
-    <SecondHook/>
+    <ProfileCard/>
   </div>
 }
 export default App;
