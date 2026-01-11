@@ -6,7 +6,7 @@ const FirstHook = () => {
     useEffect(()=>{
         console.log('call useEffect')
         document.title=`Increment ${value}`
-    },[]) 
+    }) 
   return (
     <div>
         <h2>{value}</h2>
