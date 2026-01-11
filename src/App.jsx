@@ -1,7 +1,8 @@
-import Todo_app1 from "./projects/Todo-app1.jsx"
+import Food from "./projects/Food.jsx";
+
 const App=()=>{
   return <div>
-    <Todo_app1/>
+    <Food/>
   </div>
 }
 export default App;
