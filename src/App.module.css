@@ -3,11 +3,7 @@
   width: 200px;
   border-radius: 5px;
 }
-.buttonsContainer {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
+
 .buttons {
   width: 45px;
   height: 45px;
