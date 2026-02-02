@@ -1,8 +1,8 @@
-import Example1 from "./components/Example1.jsx";
+import Example2 from "./components/Example2.jsx";
 const App = () => {
   return (
     <div>
-      <Example1 />
+      <Example2 />
     </div>
   );
 };
