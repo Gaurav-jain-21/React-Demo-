@@ -1,4 +1,5 @@
 import React from "react";
+import Card from "./components/Card.jsx";
 
 const App = () => {
   return (
@@ -10,6 +11,11 @@ const App = () => {
         isMarried={false}
         hobbies={["Codding", "Reading", "Sleeping"]}
       />
+      <br />
+      <Card>
+        <h1> My Card </h1>
+        <p> This is some content for my card 1</p>
+      </Card>
     </div>
   );
 };
