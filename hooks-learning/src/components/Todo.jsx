@@ -12,6 +12,10 @@ const Todo = () => {
   const handleDelete = (n) => {
     setName(name.filter((f) => f !== n));
   };
+  const handleEdit = (n) => {
+    setNewName(n);
+    setName(name.map((word) => (word === n ? new_name : word)));
+  };
   return (
     <section>
       <input
@@ -28,6 +32,9 @@ const Todo = () => {
               <h4>{n}</h4>
               <button value={n} onClick={() => handleDelete(n)}>
                 Delete name
+              </button>
+              <button value={n} onClick={() => handleEdit(n)}>
+                Edit Name
               </button>
             </div>
           </li>

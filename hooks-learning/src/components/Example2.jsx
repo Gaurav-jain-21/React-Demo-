@@ -1,28 +1,61 @@
 import { useState } from "react";
-const Example2 = () => {
-  const [friends, setFriends] = useState(["Ashif", "Vikash"]);
-  const AddFriend = () => {
-    setFriends([...friends, "Ram"]);
+
+const Todo = () => {
+  const [names, setNames] = useState(["ram", "vikash", "ashif", "rahul"]);
+  const [newName, setNewName] = useState("");
+  const [editName, setEditName] = useState(null);
+
+  const handleChange = (e) => {
+    setNewName(e.target.value);
   };
-  const RemoveFriend = () => {
-    setFriends(friends.filter((f) => f !== "Vikash"));
+
+  const handleAddOrUpdate = () => {
+    if (newName.trim() === "") return;
+
+    if (editName !== null) {
+      setNames(names.map((n) => (n === editName ? newName : n)));
+      setEditName(null);
+    } else {
+      setNames([...names, newName]);
+    }
+
+    setNewName("");
   };
-  const UpdateFriend = () => {
-    setFriends(
-      friends.map((f) => (f === "Vikash" ? "Vikash Kumar Sharma" : f)),
-    );
+
+  const handleDelete = (n) => {
+    setNames(names.filter((item) => item !== n));
   };
+
+  const handleEdit = (n) => {
+    setNewName(n); 
+    setEditName(n); 
+  };
+
   return (
     <section>
-      {friends.map((f, index) => (
-        <li key={index}> {f}</li>
-      ))}
-      <br />
+      <input
+        type="text"
+        placeholder="Enter your name"
+        value={newName}
+        onChange={handleChange}
+      />
 
-      <button onClick={AddFriend}>Add new Friend</button>
-      <button onClick={RemoveFriend}>Remove Friend</button>
-      <button onClick={UpdateFriend}>Update Friend</button>
+      <button onClick={handleAddOrUpdate}>
+        {editName ? "Update Name" : "Add Name"}
+      </button>
+
+      <h3>Todo List</h3>
+      <ul>
+        {names.map((n, index) => (
+          <li key={index}>
+            <h4>{n}</h4>
+            <button onClick={() => handleDelete(n)}>Delete</button>
+            <button onClick={() => handleEdit(n)}>Edit</button>
+          </li>
+        ))}
+      </ul>
     </section>
   );
 };
-export default Example2;
+
+export default Todo;
