@@ -4,7 +4,7 @@ const App = () => {
   useEffect(() => {
     console.log("Call useEffect");
     document.title = `Increment ${value}`;
-  }, []); //if initialize empty array this function only fire onece
+  }, [value]); //if initialize empty array this function only fire onece
   return (
     <div>
       <h2>{value}</h2>
