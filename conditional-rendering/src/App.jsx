@@ -1,13 +1,12 @@
 import React from "react";
-import Example1 from "./components/Example1.jsx";
-import Cart from "./components/Cart.jsx";
+import EventHandler from "./components/EventHandler.jsx";
+import Move from "./components/Move.jsx";
 
 const App = () => {
   return (
     <div>
-      <Example1 isValid={true} />
-      <br />
-      <Cart />
+      <EventHandler />
+      <Move />
     </div>
   );
 };
