@@ -1,11 +1,18 @@
-import React from "react";
-import ComponentA from "./ComponentA.jsx";
+import { createContext } from "react";
+import ComponentA from "./components/ComponentA.jsx";
+export const Data = createContext();
+export const Data1 = createContext();
 
 const App = () => {
   const name = "Gaurav";
+  const age = 22;
   return (
     <div>
-      <ComponentA name={name}/>
+      <Data.Provider value={name}>
+        <Data1.Provider value={age}>
+          <ComponentA />
+        </Data1.Provider>
+      </Data.Provider>
     </div>
   );
 };
