@@ -18,11 +18,14 @@ const reducer = (state, action) => {
       return state;
   }
 };
-const App = () => {
+const Example1 = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
-  return <div>
-    <h1>count: {state.count}</h1>
-
-  </div>;
+  return (
+    <div>
+      <h1>count: {state.count}</h1>
+      <button onClick={() => dispatch({ type: "increment" })}>+</button>
+      <button onClick={() => dispatch({ type: "decrement" })}>-</button>
+    </div>
+  );
 };
-export default App;
+export default Example1;
