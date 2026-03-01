@@ -20,6 +20,14 @@ const Example2 = () => {
   const [inputValue, setInputValue] = useState(0);
   const handleIncrement = () => dispatch({ type: "increment" });
   const handleDecrement = () => dispatch({ type: "decrement" });
+  const handleIncementByAmount = () => {
+    dispatch({ type: "incrementByAmount", payload: Number(inputValue) });
+    setInputValue(0);
+  };
+  const handleDecrementByAmount = () => {
+    dispatch({ type: "decrementByAmount", payload: +inputValue });
+    setInputValue(0);
+  };
   //   const handleReset=()=>dispatch({type:})
   return (
     <div>
@@ -27,6 +35,16 @@ const Example2 = () => {
       <button onClick={handleIncrement}>Increment</button>
       <button onClick={handleDecrement}>Decrement</button>
       {/* <button onClick={handleReset}>Reset</button> */}
+      <div>
+        <input
+          type="number"
+          value={inputValue}
+          onChange={(e) => setInputValue(e.target.value)}
+          placeholder="Enter the number"
+        />
+        <button onClick={handleIncementByAmount}>Add</button>
+        <button onClick={handleDecrementByAmount}>Sub</button>
+      </div>
     </div>
   );
 };
