@@ -25,6 +25,7 @@ const Example1 = () => {
       <h1>count: {state.count}</h1>
       <button onClick={() => dispatch({ type: "increment" })}>+</button>
       <button onClick={() => dispatch({ type: "decrement" })}>-</button>
+      <button onClick={() => dispatch({ type: "reset" })}>0</button>
     </div>
   );
 };
